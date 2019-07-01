@@ -35,7 +35,7 @@ npm run lint
 
 # config
 
-## change baseurl for http request:
+## change VUE_APP_ROOT_URL for http request:
 
 * .env - for online environment
 * .env.development - for test environment

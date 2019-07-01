@@ -50,7 +50,9 @@
       "parser": "babel-eslint"
     }
   },
-  "eslintIgnore": ["node_modules"],
+  "eslintIgnore": [
+    "node_modules"
+  ],
   "postcss": {
     "plugins": {
       "autoprefixer": {}
