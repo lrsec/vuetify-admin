@@ -1,6 +1,6 @@
 # Vuetify Admin
 
-> cms admin with Vuetify: https://github.com/vuetifyjs/vuetify
+> cms admin with Vuetify: https://github.com/vuetifyjs/vuetify<br/>
 > Use structure code from iview-admin: https://github.com/iview/iview-admin
 
 
