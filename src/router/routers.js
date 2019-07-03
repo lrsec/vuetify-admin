@@ -58,7 +58,6 @@ export default [
       hideInMenu: true
     },
     redirect: 'dashboard-page',
-    component: () => import('../views/Home'),
     children: [
 
     ]
@@ -71,7 +70,7 @@ export default [
       hideInMenu: true,
       access: 'dashboard'
     },
-    component: () => import('../views/dashboard/Home'),
+    component: () => import('../views/Home'),
     children: [{
       path: 'page',
       name: 'dashboard-page',
