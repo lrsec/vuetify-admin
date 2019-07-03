@@ -57,7 +57,7 @@ export default [
     meta: {
       hideInMenu: true
     },
-    redirect: 'dashboard-page',
+    redirect: '/dashboard/page',
     children: [
 
     ]
@@ -67,7 +67,6 @@ export default [
     name: 'dashboard',
     meta: {
       title: '概览',
-      hideInMenu: true,
       access: 'dashboard'
     },
     component: () => import('../views/Home'),
