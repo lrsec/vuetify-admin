@@ -116,7 +116,7 @@
                 <v-flex xs4>
                   <v-text-field
                     v-model="newAccountName"
-                    label="角色名"
+                    label="用户名"
                     :rules="nameRules"
                     required
                   />
@@ -199,7 +199,7 @@
                 <v-flex xs4>
                   <v-text-field
                     v-model="accountInEdit.name"
-                    label="角色名"
+                    label="用户名"
                     :rules="nameRules"
                     required
                   />
