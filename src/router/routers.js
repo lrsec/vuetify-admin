@@ -55,24 +55,33 @@ export default [
     path: '/',
     name: 'home',
     meta: {
-      title: '概览',
-      icon: 'dashboard'
+      hideInMenu: true
     },
-    redirect: '/dashboard',
+    redirect: 'dashboard-page',
     component: () => import('../views/Home'),
     children: [
-      {
-        path: '/dashboard',
-        name: 'dashboard',
-        meta: {
-          title: '概览',
-          hideInMenu: true,
-          access: 'dashboard'
-        },
-        component: () => import('../views/dashboard/Dashboard'),
-        children: []
-      }
+
     ]
+  },
+  {
+    path: '/dashboard',
+    name: 'dashboard',
+    meta: {
+      title: '概览',
+      hideInMenu: true,
+      access: 'dashboard'
+    },
+    component: () => import('../views/dashboard/Home'),
+    children: [{
+      path: 'page',
+      name: 'dashboard-page',
+      meta: {
+        title: '概览',
+        hideInMenu: true,
+        access: 'dashboard'
+      },
+      component: () => import('../views/dashboard/Dashboard')
+    }]
   },
   {
     path: '/auth',
