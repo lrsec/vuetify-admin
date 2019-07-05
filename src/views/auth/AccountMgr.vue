@@ -251,7 +251,7 @@
 
         <v-card-actions>
           <v-spacer />
-          <v-btn color="blue darken-1" flat @click="closeAddAccount">取消</v-btn>
+          <v-btn color="blue darken-1" flat @click="closeEditAccount">取消</v-btn>
           <v-btn color="blue darken-1" flat @click="submitEditAccount">确定</v-btn>
         </v-card-actions>
       </v-card>
