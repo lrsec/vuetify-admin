@@ -461,9 +461,9 @@ export default {
 
       for (let i = 0; i < this.roles.length; i++) {
         const role = this.roles[i]
-        if (role.id === item.id) {
+        if (role.id === item.roleId) {
           this.accountInEdit.role = role
-          return
+          break
         }
       }
 
