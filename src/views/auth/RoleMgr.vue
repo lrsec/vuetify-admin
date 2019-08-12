@@ -103,6 +103,7 @@
                     v-model="newRoleName"
                     label="角色名"
                     :rules="roleNameRules"
+                    :disabled="roleInEdit.editable === 0"
                     required
                   />
                 </v-flex>
@@ -110,6 +111,7 @@
                 <v-flex xs4>
                   <v-text-field
                     v-model="newRoleDetail"
+                    :disabled="roleInEdit.editable === 0"
                     label="备注"
                   />
                 </v-flex>
@@ -119,6 +121,7 @@
                     v-model="newRoleStatus"
                     :items="roleStatusList"
                     label="立即启用"
+                    :disabled="roleInEdit.editable === 0"
                     required
                   ></v-select>
                 </v-flex>
