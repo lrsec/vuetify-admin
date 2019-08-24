@@ -396,10 +396,14 @@ export default {
         if (ap.children.length > 0) {
           let childrenCounts = this.parseRoleAccess(ap.children, selected)
           contents = contents.concat(childrenCounts)
-        }
 
-        if (selected.includes(ap.name)) {
-          contents = contents.concat(ap.contents)
+          if (childrenCounts.length > 0) {
+            contents = contents.concat(ap.contents)
+          }
+        } else {
+          if (selected.includes(ap.name)) {
+            contents = contents.concat(ap.contents)
+          }
         }
       }
       return contents
@@ -411,10 +415,14 @@ export default {
         if (ap.children.length > 0) {
           let childNames = this.readAccessNames(ap.children, access)
           names = names.concat(childNames)
-        }
 
-        if (ap.contents && ap.contents.length > 0 && hasOneOf(access, ap.contents)) {
-          names.push(ap.name)
+          if (childNames.length >= ap.children.length) {
+            names.push(ap.name)
+          }
+        } else {
+          if (ap.contents && ap.contents.length > 0 && hasOneOf(access, ap.contents)) {
+            names.push(ap.name)
+          }
         }
       }
 
